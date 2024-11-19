@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              _buildStatCard('Carros Disponíveis', '158'),
+              _buildStatCard('Carros Disponíveis', '10'),
               _buildStatCard('Vendedores', '45'),
             ],
           ),
