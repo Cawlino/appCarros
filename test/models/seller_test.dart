@@ -1,4 +1,3 @@
-// Arquivo: test/models/seller_test.dart
 import 'package:flutter_test/flutter_test.dart';
 import 'package:projeto/models/seller.dart';
 import 'package:projeto/models/car.dart';
