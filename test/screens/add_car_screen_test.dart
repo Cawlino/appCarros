@@ -11,11 +11,9 @@ void main() {
         ),
       );
 
-      // Tenta salvar sem preencher os campos
       await tester.tap(find.text('Salvar'));
       await tester.pump();
 
-      // Verifica se mensagens de validação aparecem
       expect(find.text('Por favor, insira a marca'), findsOneWidget);
       expect(find.text('Por favor, insira o modelo'), findsOneWidget);
       expect(find.text('Por favor, insira o ano'), findsOneWidget);
@@ -30,17 +28,14 @@ void main() {
         ),
       );
 
-      // Preenche os campos
       await tester.enterText(find.byType(TextFormField).at(0), 'Toyota');
       await tester.enterText(find.byType(TextFormField).at(1), 'Corolla');
       await tester.enterText(find.byType(TextFormField).at(2), '2022');
       await tester.enterText(find.byType(TextFormField).at(3), '120000');
 
-      // Salva o formulário
       await tester.tap(find.text('Salvar'));
       await tester.pump();
 
-      // Verifica se não há mensagens de erro
       expect(find.text('Por favor, insira a marca'), findsNothing);
       expect(find.text('Por favor, insira o modelo'), findsNothing);
       expect(find.text('Por favor, insira o ano'), findsNothing);
