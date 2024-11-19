@@ -28,7 +28,6 @@ class CarListScreen extends StatelessWidget {
               subtitle: Text('R\$ ${(50000 + index * 10000).toString()}'),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
-                // Implementar detalhes do carro
               },
             ),
           );
